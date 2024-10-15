@@ -9,8 +9,13 @@ function DisplayData({name, identification}) {
   return (
     <div>
       <nav>
-        <Link to="/about">About</Link> <br></br>
-        <Link to="/contact">Contact</Link>
+      <table>
+          <tr>
+            <td>
+              <Link to="/about">About</Link> </td>
+              <td><Link to="/contact">Contact</Link></td>
+            </tr>
+      </table>      
       </nav>
       <h1>
         {name}
@@ -49,9 +54,9 @@ export function About() {
       <Link to="/">Home</Link>
       <Link to="/contact">Contact</Link>
       </nav>
-      <h2>
+      <h1>
         You are in About US
-      </h2>
+      </h1>
     </div>
   );
 }
@@ -63,16 +68,16 @@ useEffect(() => {
       .then((response) => response.json())
       .then(setData);
 },[]);
-//if(data) 
-  //return <DisplayData name={data.login} identification={data.id} />
+if(data) 
+  return <DisplayData name={data.login} identification={data.id} />
 
-  return (
+  /*return (
     <div className="App">
       <h1>
       <EmployeeForm />
       </h1>
     </div>
-  );
+  );*/
 }
 
 export default App;
