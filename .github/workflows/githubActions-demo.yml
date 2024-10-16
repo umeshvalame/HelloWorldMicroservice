@@ -14,8 +14,8 @@ jobs:
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub"
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: echo "This job's status is ${{ job.status }}."
       - name: Building the image from Dockerfile.dev
-        run: docker build -t react-app:latest
+        run: docker build -t react-app:latest .
+      - run: echo "Job status is now ${{job.status}}
         
  
