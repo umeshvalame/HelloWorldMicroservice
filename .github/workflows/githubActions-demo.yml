@@ -15,7 +15,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Building the image from Dockerfile.dev
-        run: docker build -f Dockerfile.dev -t react-app:latest reach-app/
+        run: docker build -f Dockerfile.dev -t react-app:latest reach-app
       - run: echo "Job status is now ${{job.status}}
         
  
