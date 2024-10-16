@@ -16,6 +16,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Building the image from Dockerfile
         run: docker build -t react-app:latest reach-app/
-      - run: echo "Docker build image Job status is now ${{job.status}}"
+      - run: echo "Job status is now ${{job.status}}
+      - name: Login to Docker Hub
+        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCER_PASSWORD}}
+      - name: Push image to docker Hub
+        run: docker push react-app:latest
+
         
  
