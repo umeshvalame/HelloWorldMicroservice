@@ -95,7 +95,7 @@ export function About() {
               <b>Full Name : </b>{item.full_name}</p>
               <p><b>Language : </b>{item.language}</p>
               <p>Above ReactJs RestAPI is hosted on cloud 
-               <p></p> User -> ELB -> ECS(instance_type=fargage) -> c1(container task) -> DAX - DyanmoDB</p>
+               <p></p> User -> ELB -> ECS(instance_type=fargage) -> c1(container task) -> DAX(Cache) - DyanmoDB</p>
             </div>
           ))}
         </div>
