@@ -8,7 +8,7 @@ env:
   AWS_REGION: us-east-1
   ECS_SERVICE: nginxdemos-reactapp
   ECS_CLUSTER: DemoCluster
-  ECS_TASK_DEFINITION: react-app
+  ECS_TASK_DEFINITION: nginxdemos-reactapp
   CONTAINER_IMAGE: umeshvalame/react-app:latest
   CONTAINER_NAME: nginxdemos-reactapp
 
